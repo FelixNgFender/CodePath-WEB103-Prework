@@ -1,6 +1,6 @@
 import { useRoutes, BrowserRouter } from "react-router-dom";
 import "./App.css";
-import { ShowCreators } from "./pages/ShowCreators";
+import { ShowCreators } from "./pages/ShowCreators/ShowCreators";
 import { AddCreator } from "./pages/AddCreator";
 import { EditCreator } from "./pages/EditCreator";
 import { ViewCreator } from "./pages/ViewCreator";
