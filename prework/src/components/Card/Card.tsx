@@ -1,16 +1,15 @@
 import styles from "./Card.module.css";
+import { Creator } from "@/types/collection";
 
-type CardProps = {
-  name: string;
-  url: string;
-  description: string;
-  imageURL?: string;
-};
-
-export const Card = ({ name, url, description, imageURL }: CardProps) => {
+export const Card = ({ creator }: { creator: Creator }) => {
+  const { name, url, description, imageURL } = creator;
   return (
     <article className={styles.card}>
-      <img className={styles.card__image} src={imageURL} alt={name} />
+      <img
+        className={styles.card__image}
+        src={imageURL ?? undefined}
+        alt={name}
+      />
       <div>
         <h6>{name}</h6>
         <small>
