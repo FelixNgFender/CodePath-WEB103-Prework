@@ -1,0 +1,9 @@
+.required::after {
+  content: " *";
+  color: var(--muted-color);
+}
+
+.input__details {
+  font-size: 0.8rem;
+  color: var(--muted-color);
+}
