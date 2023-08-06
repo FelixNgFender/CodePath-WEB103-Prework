@@ -1,6 +1,7 @@
 import { MainLayout } from "@/components";
 import styles from "./EditCreator.module.css";
 import { editCreator } from "./api/editCreator";
+import { deleteCreator } from "./api/deleteCreator";
 import { Creator } from "@/types";
 import { getCreator } from "@/pages/ViewCreator";
 import { useNavigate, useParams } from "react-router-dom";
@@ -33,6 +34,14 @@ export const EditCreator = () => {
     fetcher();
   }, [fetcher]);
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -46,16 +55,14 @@ export const EditCreator = () => {
     };
 
     editCreator(creator);
-
     navigate("/");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const handleDelete = () => {
+    if (!window.confirm("Are you sure you want to delete this creator?"))
+      return;
+    deleteCreator(id);
+    navigate("/");
   };
 
   return (
@@ -118,7 +125,16 @@ export const EditCreator = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Edit</button>
+        <div className="grid">
+          <button type="submit">Edit</button>
+          <button
+            type="button"
+            className={styles.delete}
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        </div>
       </form>
     </MainLayout>
   );
