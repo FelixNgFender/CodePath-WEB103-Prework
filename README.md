@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Hololive Creatorverse Demo](https://i.imgur.com/PjuOtHQ.gif)
+![Hololive Creatorverse Demo](./docs/walkthrough.gif)
 
 GIF created with ShareX
 
