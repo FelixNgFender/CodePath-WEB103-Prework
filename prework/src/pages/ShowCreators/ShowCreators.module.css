@@ -4,3 +4,11 @@
   align-items: center;
   max-height: 100vh;
 }
+
+.creatorsContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -20,14 +20,15 @@ export const ShowCreators = () => {
   return (
     <main className={"container " + styles.main}>
       <h1>Creatorverse</h1>
+
       {!creators || creators.length === 0 ? (
         <h6>No creators found</h6>
       ) : (
-        <div className="grid">
+        <section className={styles.creatorsContainer}>
           {creators.map((creator) => (
             <Card key={creator.id} creator={creator} />
           ))}
-        </div>
+        </section>
       )}
     </main>
   );

@@ -1,10 +1,21 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: auto;
+  border: 2px solid var(--muted-color);
+  background-size: cover;
+  background-position-y: 20%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  margin: 10px;
+  width: 40%;
+  height: 340px;
 }
 
-.card__image {
-  max-width: 100%;
-  height: auto;
+.card__body {
+  margin-bottom: 0;
+  opacity: 0.4;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card__body:hover {
+  opacity: 1;
 }
