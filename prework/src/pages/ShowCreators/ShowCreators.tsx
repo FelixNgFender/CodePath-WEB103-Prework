@@ -2,7 +2,8 @@ import { getCreators } from "./api/getCreators";
 import { useState, useEffect, useCallback } from "react";
 import { Card } from "@/components";
 import styles from "./ShowCreators.module.css";
-import { Creator } from "@/types/collection";
+import { Creator } from "@/types";
+import { MainLayout } from "@/components";
 
 export const ShowCreators = () => {
   const [creators, setCreators] = useState<Creator[]>([]);
@@ -18,9 +19,7 @@ export const ShowCreators = () => {
   }, [fetcher]);
 
   return (
-    <main className={"container " + styles.main}>
-      <h1>Creatorverse</h1>
-
+    <MainLayout>
       {!creators || creators.length === 0 ? (
         <h6>No creators found</h6>
       ) : (
@@ -30,6 +29,6 @@ export const ShowCreators = () => {
           ))}
         </section>
       )}
-    </main>
+    </MainLayout>
   );
 };

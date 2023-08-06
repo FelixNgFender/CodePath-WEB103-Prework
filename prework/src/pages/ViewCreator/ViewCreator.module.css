@@ -1,0 +1,12 @@
+.creatorContainer {
+  margin-top: var(--block-spacing-vertical);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creatorImage {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+}

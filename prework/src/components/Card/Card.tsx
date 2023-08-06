@@ -1,15 +1,26 @@
+import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
-import { Creator } from "@/types/collection";
+import { Creator } from "@/types";
 
 export const Card = ({ creator }: { creator: Creator }) => {
-  const { name, url, description, imageURL } = creator;
+  const { id, name, url, description, imageURL } = creator;
   return (
     <div
       className={styles.card}
-      style={{ backgroundImage: `url(${imageURL})` }}
+      style={{ backgroundImage: `url("bing" + ${imageURL})` }}
     >
       <article className={styles.card__body}>
-        <h6>{name}</h6>
+        <h6 className={styles.card__body__title}>
+          {name}
+          <div className={styles.card__body__iconButtons}>
+            <Link to={"/edit/" + id}>
+              <span className="material-icons-round">edit</span>
+            </Link>
+            <Link to={"/" + id}>
+              <span className="material-icons-round">info</span>
+            </Link>
+          </div>
+        </h6>
         <small>
           {description}
           <br />

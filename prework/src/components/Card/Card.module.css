@@ -5,7 +5,6 @@
   background-position-y: 20%;
   background-repeat: no-repeat;
   border-radius: 4px;
-  margin: 10px;
   width: 40%;
   height: 340px;
 }
@@ -18,4 +17,19 @@
 
 .card__body:hover {
   opacity: 1;
+}
+
+.card__body__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__body__iconButtons {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.card__body__iconButtons span:hover {
+  transform: scale(1.2);
 }
