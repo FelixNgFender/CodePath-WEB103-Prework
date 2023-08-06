@@ -1,9 +1,11 @@
-import { MainLayout } from "@/components";
-import styles from "./AddCreator.module.css";
-import { addCreator } from "./api/addCreator";
-import { Creator } from "@/types";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
+import { MainLayout } from "@/components";
+import { Creator } from "@/types";
+
+import styles from "./AddCreator.module.css";
+import { addCreator } from "./api/addCreator";
 
 export const AddCreator = () => {
   const navigate = useNavigate();

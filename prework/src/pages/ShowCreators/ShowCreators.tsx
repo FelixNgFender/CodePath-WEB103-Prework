@@ -1,9 +1,11 @@
-import { getCreators } from "./api/getCreators";
 import { useState, useEffect, useCallback } from "react";
-import { Card } from "@/components";
-import styles from "./ShowCreators.module.css";
-import { Creator } from "@/types";
+
 import { MainLayout } from "@/components";
+import { Card } from "@/components";
+import { Creator } from "@/types";
+
+import { getCreators } from "./api/getCreators";
+import styles from "./ShowCreators.module.css";
 
 export const ShowCreators = () => {
   const [creators, setCreators] = useState<Creator[]>([]);

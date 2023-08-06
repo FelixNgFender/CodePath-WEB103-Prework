@@ -1,11 +1,13 @@
+import { useNavigate, useParams } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+
 import { MainLayout } from "@/components";
+import { Creator } from "@/types";
+import { getCreator } from "@/pages/ViewCreator";
+
 import styles from "./EditCreator.module.css";
 import { editCreator } from "./api/editCreator";
 import { deleteCreator } from "./api/deleteCreator";
-import { Creator } from "@/types";
-import { getCreator } from "@/pages/ViewCreator";
-import { useNavigate, useParams } from "react-router-dom";
-import { useCallback, useEffect, useState } from "react";
 
 export const EditCreator = () => {
   const navigate = useNavigate();

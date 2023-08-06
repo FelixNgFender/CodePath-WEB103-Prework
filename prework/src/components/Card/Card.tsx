@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import styles from "./Card.module.css";
+
 import { Creator } from "@/types";
+
+import styles from "./Card.module.css";
 
 export const placeholderImageURL =
   "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png";

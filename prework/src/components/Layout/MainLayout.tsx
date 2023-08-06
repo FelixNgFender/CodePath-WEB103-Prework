@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import styles from "./MainLayout.module.css";
 
 type MainLayoutProps = {
@@ -8,7 +9,7 @@ type MainLayoutProps = {
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <main className={"container " + styles.main}>
-      <h1>Creatorverse</h1>
+      <h1>Hololive Creatorverse</h1>
 
       <div className="container-fluid">
         <section className="grid">

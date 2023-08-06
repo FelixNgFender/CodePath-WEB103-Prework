@@ -1,11 +1,12 @@
-import { MainLayout } from "@/components";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getCreator } from "./api/getCreator";
+import { useState, useCallback, useEffect } from "react";
+
+import { MainLayout, placeholderImageURL } from "@/components";
 import { deleteCreator } from "@/pages/EditCreator";
 import { Creator } from "@/types";
-import { useState, useCallback, useEffect } from "react";
+
 import styles from "./ViewCreator.module.css";
-import { placeholderImageURL } from "@/components";
+import { getCreator } from "./api/getCreator";
 
 export const ViewCreator = () => {
   const { id } = useParams<{ id: string }>() as { id: string };

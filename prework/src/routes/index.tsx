@@ -1,3 +1,5 @@
+import { useRoutes } from "react-router-dom";
+
 import {
   ShowCreators,
   AddCreator,
@@ -5,7 +7,6 @@ import {
   ViewCreator,
   NotFound,
 } from "@/pages";
-import { useRoutes } from "react-router-dom";
 
 export const AppRoutes = () => {
   const element = useRoutes([
