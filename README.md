@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://i.imgur.com/PjuOtHQ.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Hololive Creatorverse Demo](https://i.imgur.com/PjuOtHQ.gif)
 
 GIF created with ShareX
 
