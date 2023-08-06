@@ -10,7 +10,7 @@ export const ShowCreators = () => {
 
   const fetcher = useCallback(async () => {
     const creators = await getCreators();
-    if (!creators) return console.log("No creators found");
+    if (!creators) return;
     setCreators(creators);
   }, []);
 

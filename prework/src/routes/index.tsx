@@ -14,6 +14,10 @@ export const AppRoutes = () => {
       element: <ShowCreators />,
     },
     {
+      path: "/users",
+      element: <ShowCreators />,
+    },
+    {
       path: "/new",
       element: <AddCreator />,
     },
@@ -22,8 +26,12 @@ export const AppRoutes = () => {
       element: <EditCreator />,
     },
     {
-      path: "/:id",
+      path: "/user/:id",
       element: <ViewCreator />,
+    },
+    {
+      path: "/404",
+      element: <NotFound />,
     },
     {
       path: "*",

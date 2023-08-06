@@ -10,3 +10,7 @@
   height: 340px;
   object-fit: cover;
 }
+
+.delete {
+  background-color: var(--del-color);
+}

@@ -13,3 +13,14 @@
   gap: 20px;
   justify-content: center;
 }
+
+/* reduce to 1 column on small screens */
+@media (max-width: 600px) {
+  .creatorsContainer {
+    flex-direction: column;
+  }
+
+  .creatorsContainer div {
+    width: 100%;
+  }
+}
